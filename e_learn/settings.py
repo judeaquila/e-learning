@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     # My Installed Apps
     'main.apps.MainConfig',
-    'crispy_forms'
+    'crispy_forms',
+    'user.apps.UserConfig',
 ]
 
 CRISPY_TEMPLATES_PACK = 'bootstrap5'
@@ -60,7 +61,9 @@ ROOT_URLCONF = 'e_learn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
